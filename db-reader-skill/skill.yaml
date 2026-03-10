@@ -1,0 +1,36 @@
+name: db-reader
+version: 1.0.0
+description: SQLite数据库文件(.db)读取和处理Skill - 支持查看表、查询、增删改数据
+author: CodeBuddy
+tags:
+  - database
+  - sqlite
+  - db
+  - sql
+capabilities:
+  - 读取.db文件并列出所有数据表
+  - 查看表结构和全量数据
+  - 执行SQL查询
+  - 插入新数据
+  - 更新现有数据
+  - 删除数据
+commands:
+  - name: list-tables
+    description: 列出数据库中所有表
+    usage: "列出所有表"
+  - name: show-table
+    description: 显示指定表的结构和所有数据
+    usage: "查看表 users 的数据"
+  - name: query
+    description: 执行SQL查询
+    usage: "查询 select * from users where id=1"
+  - name: insert
+    description: 插入新数据
+    usage: "插入数据到 users 表"
+  - name: update
+    description: 更新数据
+    usage: "更新 users 表 id=1 的数据"
+  - name: delete
+    description: 删除数据
+    usage: "删除 users 表 id=1 的数据"
+entry_point: handler.py
